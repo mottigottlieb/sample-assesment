@@ -18,6 +18,7 @@ class LawyerController < ApplicationController
         @new_scrape = Scrape.new
         @new_scrape.scrape_page("https://www.avvo.com/search/lawyer_search?utf8=%E2%9C%93&q=#{@legal}&loc=#{@location}&button=")
         @new_scrape.seed_lawyers
+        @show = Lawyer.all
           erb :"lawyer/results"
           end
           #  [#<Lawyer id: 1, name: nil,  nil, rating: nil, years: nil, number: nil>
